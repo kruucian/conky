@@ -1,0 +1,89 @@
+# **********************************************************************
+# "CPU Panel (32-core)" theme for Conky 
+# modified from "CPU Panel (8-core)" theme for Conky by Tony George (teejee2008@gmail.com)
+#
+# Hanseung Choi (kruucian@gmail.com)
+# **********************************************************************
+
+background yes
+double_buffer yes
+
+alignment top_left
+
+border_width 1
+cpu_avg_samples 2
+default_color grey
+default_outline_color grey
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+
+gap_x 20
+gap_y 30
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+
+own_window yes
+own_window_type normal
+own_window_colour 000000
+own_window_transparent no
+own_window_argb_visual no
+own_window_argb_value 0
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+minimum_size 200 440
+stippled_borders 0
+update_interval 0.5
+uppercase no
+use_spacer none
+
+show_graph_scale no
+show_graph_range no
+
+use_xft yes
+xftalpha 0.1
+xftfont Droid Sans:size=8
+color0 white
+color1 EAEAEA
+color2 FFA300
+color3 grey
+
+TEXT
+${font sans-serif:size=8} CPU 00: $alignr ${cpu cpu1}%  ${cpubar cpu1  8,20}  ${cpugraph cpu1  8,30}
+${font sans-serif:size=8} CPU 01: $alignr ${cpu cpu2}%  ${cpubar cpu2  8,20}  ${cpugraph cpu2  8,30}
+${font sans-serif:size=8} CPU 02: $alignr ${cpu cpu3}%  ${cpubar cpu3  8,20}  ${cpugraph cpu3  8,30}
+${font sans-serif:size=8} CPU 03: $alignr ${cpu cpu4}%  ${cpubar cpu4  8,20}  ${cpugraph cpu4  8,30}
+${font sans-serif:size=8} CPU 04: $alignr ${cpu cpu5}%  ${cpubar cpu5  8,20}  ${cpugraph cpu5  8,30}
+${font sans-serif:size=8} CPU 05: $alignr ${cpu cpu6}%  ${cpubar cpu6  8,20}  ${cpugraph cpu6  8,30}
+${font sans-serif:size=8} CPU 06: $alignr ${cpu cpu7}%  ${cpubar cpu7  8,20}  ${cpugraph cpu7  8,30}
+${font sans-serif:size=8} CPU 07: $alignr ${cpu cpu8}%  ${cpubar cpu8  8,20}  ${cpugraph cpu8  8,30}
+${font sans-serif:size=8} CPU 08: $alignr ${cpu cpu9}%  ${cpubar cpu9  8,20}  ${cpugraph cpu9  8,30}
+${font sans-serif:size=8} CPU 09: $alignr ${cpu cpu10}%  ${cpubar cpu10 8,20}  ${cpugraph cpu10 8,30}
+${font sans-serif:size=8} CPU 10: $alignr ${cpu cpu11}%  ${cpubar cpu11 8,20}  ${cpugraph cpu11 8,30}
+${font sans-serif:size=8} CPU 11: $alignr ${cpu cpu12}%  ${cpubar cpu12 8,20}  ${cpugraph cpu12 8,30}
+${font sans-serif:size=8} CPU 12: $alignr ${cpu cpu13}%  ${cpubar cpu13 8,20}  ${cpugraph cpu13 8,30}
+${font sans-serif:size=8} CPU 13: $alignr ${cpu cpu14}%  ${cpubar cpu14 8,20}  ${cpugraph cpu14 8,30}
+${font sans-serif:size=8} CPU 14: $alignr ${cpu cpu15}%  ${cpubar cpu15 8,20}  ${cpugraph cpu15 8,30}
+${font sans-serif:size=8} CPU 15: $alignr ${cpu cpu16}%  ${cpubar cpu16 8,20}  ${cpugraph cpu16 8,30}
+${font sans-serif:size=8} CPU 16: $alignr ${cpu cpu17}%  ${cpubar cpu17 8,20}  ${cpugraph cpu17 8,30}
+${font sans-serif:size=8} CPU 17: $alignr ${cpu cpu18}%  ${cpubar cpu18 8,20}  ${cpugraph cpu18 8,30}
+${font sans-serif:size=8} CPU 18: $alignr ${cpu cpu19}%  ${cpubar cpu19 8,20}  ${cpugraph cpu19 8,30}
+${font sans-serif:size=8} CPU 19: $alignr ${cpu cpu20}%  ${cpubar cpu20 8,20}  ${cpugraph cpu20 8,30}
+${font sans-serif:size=8} CPU 20: $alignr ${cpu cpu21}%  ${cpubar cpu21 8,20}  ${cpugraph cpu21 8,30}
+${font sans-serif:size=8} CPU 21: $alignr ${cpu cpu22}%  ${cpubar cpu22 8,20}  ${cpugraph cpu22 8,30}
+${font sans-serif:size=8} CPU 22: $alignr ${cpu cpu23}%  ${cpubar cpu23 8,20}  ${cpugraph cpu23 8,30}
+${font sans-serif:size=8} CPU 23: $alignr ${cpu cpu24}%  ${cpubar cpu24 8,20}  ${cpugraph cpu24 8,30}
+${font sans-serif:size=8} CPU 24: $alignr ${cpu cpu25}%  ${cpubar cpu25 8,20}  ${cpugraph cpu25 8,30}
+${font sans-serif:size=8} CPU 25: $alignr ${cpu cpu26}%  ${cpubar cpu26 8,20}  ${cpugraph cpu26 8,30}
+${font sans-serif:size=8} CPU 26: $alignr ${cpu cpu27}%  ${cpubar cpu27 8,20}  ${cpugraph cpu27 8,30}
+${font sans-serif:size=8} CPU 27: $alignr ${cpu cpu28}%  ${cpubar cpu28 8,20}  ${cpugraph cpu28 8,30}
+${font sans-serif:size=8} CPU 28: $alignr ${cpu cpu29}%  ${cpubar cpu29 8,20}  ${cpugraph cpu29 8,30}
+${font sans-serif:size=8} CPU 29: $alignr ${cpu cpu30}%  ${cpubar cpu30 8,20}  ${cpugraph cpu30 8,30}
+${font sans-serif:size=8} CPU 30: $alignr ${cpu cpu31}%  ${cpubar cpu31 8,20}  ${cpugraph cpu31 8,30}
+${font sans-serif:size=8} CPU 31: $alignr ${cpu cpu32}%  ${cpubar cpu32 8,20}  ${cpugraph cpu32 8,30}
+${voffset -544}${font sans-serif:size=8}${exec awk '/cpu MHz/{printf "                          %.f MHz\n",$4}' /proc/cpuinfo }
+ RAM    $memperc% ${membar 8,}${voffset -544}
